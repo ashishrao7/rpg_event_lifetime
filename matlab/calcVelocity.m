@@ -78,7 +78,7 @@ surface(y,x) = t;
 if(p == -1)
     surfPos(y,x) = t; % assign incoming event to positive SAE
     % check if pixel in imageFrame, depending on window size N  
-    if(((IMAGE_FRAME(1)-floor(N/2)>=x) && (x>=ceil(N/2))) && ((IMAGE_FRAME(2)-floor(N/2)>=y) && (y>=ceil(N/2))))
+    if(((IMAGE_FRAME(1)-floor(N/2)>=y) && (y>=ceil(N/2))) && ((IMAGE_FRAME(2)-floor(N/2)>=x) && (x>=ceil(N/2))))
         % read out local NxN surface window
         data = surfPos((y-floor(N/2)):(y+floor(N/2)),...
                        (x-floor(N/2)):(x+floor(N/2)));
@@ -129,7 +129,7 @@ end
 if(p == 1)
     surfNeg(y,x) = t; % assign incoming event to negative SAE
     % check if pixel in imageFrame, depending on window size N  
-   if(((IMAGE_FRAME(1)-floor(N/2)>=x) && (x>=ceil(N/2))) && ((IMAGE_FRAME(2)-floor(N/2)>=y) && (y>=ceil(N/2))))
+   if(((IMAGE_FRAME(1)-floor(N/2)>=y) && (y>=ceil(N/2))) && ((IMAGE_FRAME(2)-floor(N/2)>=x) && (x>=ceil(N/2))))
         % read out local NxN surface window
         data = surfNeg((y-floor(N/2)):(y+floor(N/2)),...
                        (x-floor(N/2)):(x+floor(N/2))); 
